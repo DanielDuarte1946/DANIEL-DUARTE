@@ -2,7 +2,7 @@
   index_daniel_duarte.html
   Página web simple y profesional para "Daniel Duarte" - Servicios Contables
   Instrucciones: guardar como index.html y abrir en un navegador (doble clic o Archivo -> Abrir archivo...).
-  Nota: el correo proporcionado por usted fue: "dd.contable46.com". Si su correo contiene un '@', reemplácelo en el campo correspondiente.
+  Nota: el correo proporcionado por usted fue: "dd.contable46@gmail.com". Si su correo contiene un '@', reemplácelo en el campo correspondiente.
 -->
 <!doctype html>
 <html lang="es">
