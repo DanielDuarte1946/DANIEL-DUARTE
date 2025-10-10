@@ -1,4 +1,4 @@
-<!--
+****<!--
   index_daniel_duarte.html
   Página web simple y profesional para "Daniel Duarte" - Servicios Contables
   Instrucciones: guardar como index.html y abrir en un navegador (doble clic o Archivo -> Abrir archivo...).
@@ -182,12 +182,12 @@
   <script>
     // Muestra el correo correctamente si tiene un @, sino muestra advertencia
     (function(){
-      const raw = 'dd.contable46.com';
+      const raw = 'dd.contable46@gmail.com';
       const el = document.getElementById('emailDisplay');
       if(raw.indexOf('@')!==-1){
         el.innerHTML = '<a href="mailto:'+raw+'">'+raw+'</a>';
       } else {
-        el.textContent = raw + ' (revisa que este sea tu correo; parece no incluir "@")';
+        el.textContent = raw + ' (-)';
       }
     })();
   </script>
