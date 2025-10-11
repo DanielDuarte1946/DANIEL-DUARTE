@@ -204,7 +204,7 @@
             <a class="btn-outline" href="tel:+573142144069">Llamar</a>
           </div>
         </form>
-        <div class="note">Al guardar este archivo como <code>index.html</code> y abrirlo en tu navegador verás la página. Si al hacer doble clic no abre, abre el navegador y arrastra el archivo al mismo o usa Archivo → Abrir archivo.</div>
+        <div class="note">💚 Hoy es el Día Mundial de la Salud Mental… y creo que necesito terapia, porque no puedo sacarte de mi cabeza.</div>
       </div>
     </section>
 
