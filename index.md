@@ -204,7 +204,7 @@
             <a class="btn-outline" href="tel:+573142144069">Llamar</a>
           </div>
         </form>
-        <div class="note">💚 Hoy es el Día Mundial de la Salud Mental… y creo que necesito terapia, porque no puedo sacarte de mi cabeza.</div>
+        <div class="note">.</div>
       </div>
     </section>
 
