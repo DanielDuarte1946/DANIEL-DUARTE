@@ -5,55 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Daniel Duarte - Servicios Contables</title>
   <meta name="description" content="Asesoría contable y financiera. Especialistas en declaración de renta de persona natural, outsourcing contable y asesoría tributaria.">
-
-  <!-- Metadatos para SEO y redes -->
   <meta property="og:title" content="Daniel Duarte - Servicios Contables">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://danielduarte1946.github.io/DANIEL-DUARTE/">
   <meta property="og:locale" content="es_CO">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="Daniel Duarte">
+  <meta property="og:url" content="https://danielduarte1946.github.io/DANIEL-DUARTE/">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Daniel Duarte - Servicios Contables">
+  <link rel="canonical" href="https://danielduarte1946.github.io/DANIEL-DUARTE/">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
 
-  <!-- Estilos -->
   <style>
     :root {
       --bg: #0f1724;
       --card: #0b1220;
       --accent: #0ea5a3;
       --muted: #94a3b8;
-      --glass: rgba(255,255,255,0.03);
+      --glass: rgba(255, 255, 255, 0.03);
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       color: #e6eef6;
       background: linear-gradient(180deg, #071022 0%, #0b1730 100%);
       -webkit-font-smoothing: antialiased;
     }
-    .container { max-width: 1100px; margin: 36px auto; padding: 20px; }
-    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: flex; align-items: center; gap: 14px; }
-    .logo {
-      width: 64px; height: 64px; border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent), #2dd4bf);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; color: #062023;
+
+    .container {
+      max-width: 1100px;
+      margin: 36px auto;
+      padding: 20px;
     }
-    h1 { margin: 0; font-size: 22px; }
-    p.lead { margin: 0; color: var(--muted); }
-    nav a { color: var(--muted); text-decoration: none; margin-left: 16px; }
-    .hero { display: grid; grid-template-columns: 1fr 360px; gap: 28px; margin-top: 28px; align-items: start; }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #2dd4bf);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #062023;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    p.lead {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 16px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 28px;
+      margin-top: 28px;
+      align-items: start;
+    }
+
     .card {
       background: var(--card);
       padding: 22px;
       border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(3,7,18,0.6);
-      border: 1px solid rgba(255,255,255,0.02);
+      box-shadow: 0 6px 18px rgba(3, 7, 18, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.02);
     }
-    .services ul { padding-left: 18px; margin: 10px 0; }
-    .cta { display: flex; gap: 12px; margin-top: 14px; }
+
+    .services ul {
+      padding-left: 18px;
+      margin: 10px 0;
+    }
+
+    .cta {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
     .btn {
       background: var(--accent);
       color: #062023;
@@ -63,41 +119,100 @@
       text-decoration: none;
       display: inline-block;
     }
+
     .btn-outline {
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       padding: 10px 14px;
       border-radius: 10px;
       color: var(--muted);
       text-decoration: none;
     }
-    .muted { color: var(--muted); }
-    .feature { display: flex; gap: 12px; align-items: flex-start; margin-top: 12px; }
+
+    .contact-card h3 {
+      margin: 0 0 10px 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .feature {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-top: 12px;
+    }
+
     .feature .num {
       background: var(--glass);
       padding: 8px;
       border-radius: 8px;
-      width: 42px; height: 42px;
-      display: grid; place-items: center;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
       color: var(--accent);
       font-weight: 700;
     }
-    footer { margin-top: 28px; padding: 24px; text-align: center; color: var(--muted); font-size: 14px; }
-    .faq { margin-top: 18px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-    @media(max-width:900px) {
-      .hero { grid-template-columns: 1fr; }
-      .grid-3 { grid-template-columns: 1fr; }
-      .container { margin: 12px; }
+
+    footer {
+      margin-top: 28px;
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
     }
-    label { display: block; font-size: 13px; margin: 8px 0 6px; color: var(--muted); }
-    input, textarea {
-      width: 100%; padding: 10px;
+
+    .faq {
+      margin-top: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        margin: 12px;
+      }
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin: 8px 0 6px;
+      color: var(--muted);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
       border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.03);
+      border: 1px solid rgba(255, 255, 255, 0.03);
       background: transparent;
       color: inherit;
     }
-    textarea { min-height: 120px; }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
   </style>
 </head>
 
@@ -111,97 +226,124 @@
           <p class="lead">Servicios contables — asesoría financiera y contable. Especialistas en declaración de renta persona natural.</p>
         </div>
       </div>
-      <nav>
+      <nav aria-label="principal">
         <a href="#servicios">Servicios</a>
         <a href="#faq">Preguntas</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <div>
-          <div class="card">
-            <h2>Te ayudo con tu declaración de renta</h2>
-            <p class="muted">Asesoría personalizada para personas naturales: planeación, optimización y presentación de tu declaración de renta.</p>
-            <div class="services">
-              <h3>Servicios principales</h3>
-              <ul>
-                <li><strong>Declaración de renta - Persona natural</strong></li>
-                <li>Asesoría contable y financiera</li>
-                <li>Outsourcing contable y conciliaciones</li>
-                <li>Asesoría en retenciones y cumplimiento tributario</li>
-                <li>Preparación de estados financieros</li>
-              </ul>
-              <div class="cta">
-                <a class="btn" href="tel:+573142144069">Llamar</a>
-                <a class="btn-outline" href="#contacto">Solicitar asesoría</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="margin-top:14px;">
-            <h3>¿Por qué elegirnos?</h3>
-            <div class="feature"><div class="num">1</div><div><strong>Especialización</strong><div class="muted">En renta de personas naturales.</div></div></div>
-            <div class="feature"><div class="num">2</div><div><strong>Claridad</strong><div class="muted">Explicaciones simples y precisas.</div></div></div>
-            <div class="feature"><div class="num">3</div><div><strong>Soporte práctico</strong><div class="muted">Acompañamiento financiero completo.</div></div></div>
-          </div>
-        </div>
-
-        <aside class="card" id="contacto">
-          <h3>Contacto</h3>
-          <p class="muted">Agende su asesoría o revisión de declaración.</p>
-          <p><strong>Teléfono:</strong> <a href="tel:+573142144069">+57 314 214 4069</a></p>
-          <p><strong>Correo:</strong> <a href="mailto:dd.contable46@gmail.com">dd.contable46@gmail.com</a></p>
-          <p><strong>Horario:</strong> Lunes a Viernes, 8:30 a.m. – 5:30 p.m.</p>
-        </aside>
-      </section>
-
-      <section id="servicios">
+    <section class="hero">
+      <div>
         <div class="card">
-          <h3>Servicios detallados</h3>
-          <div class="grid-3">
-            <div><h4>Declaración de renta</h4><p class="muted">Optimización de deducciones y presentación ante la DIAN.</p></div>
-            <div><h4>Outsourcing contable</h4><p class="muted">Registro, conciliaciones y estados financieros.</p></div>
-            <div><h4>Planeación tributaria</h4><p class="muted">Estrategias legales para optimizar impuestos.</p></div>
-          </div>
-        </div>
-      </section>
+          <h2>Te ayudo con tu declaración de renta</h2>
+          <p class="muted">Asesoría personalizada para personas naturales: planeación, optimización y presentación de tu declaración de renta. También ofrecemos outsourcing contable, revisoria fiscal y asesoría tributaria.</p>
 
-      <section id="faq">
-        <div class="card">
-          <h3>Preguntas frecuentes</h3>
-          <p><strong>¿Qué documentos debo traer?</strong> Certificados, extractos y facturas deducibles.</p>
-          <p><strong>¿Cobran revisión previa?</strong> La primera revisión básica es gratuita.</p>
-        </div>
-      </section>
+          <div class="services">
+            <h3 style="margin-top:14px">Servicios principales</h3>
+            <ul>
+              <li><strong>Declaración de renta - Persona natural</strong> (análisis de ingresos, deducciones y optimización tributaria)</li>
+              <li>Asesoría contable y financiera</li>
+              <li>Outsourcing contable y conciliaciones</li>
+              <li>Asesoría en retenciones y cumplimiento tributario</li>
+              <li>Preparación de estados financieros para presentación</li>
+            </ul>
 
-      <section id="form">
-        <div class="card">
-          <h3>Escríbeme</h3>
-          <form onsubmit="event.preventDefault();alert('Formulario listo para copiar: Nombre: '+document.getElementById('name').value+'\nTel: '+document.getElementById('phone').value+'\nMensaje: '+document.getElementById('message').value)">
-            <label for="name">Nombre</label>
-            <input id="name" placeholder="Tu nombre">
-            <label for="phone">Teléfono</label>
-            <input id="phone" placeholder="Ej: 3142144069">
-            <label for="message">Mensaje</label>
-            <textarea id="message" placeholder="Cuéntame en qué te puedo ayudar"></textarea>
             <div class="cta">
-              <button class="btn" type="submit">Preparar mensaje</button>
-              <a class="btn-outline" href="tel:+573142144069">Llamar</a>
+              <a class="btn" href="tel:+573142144069">Llamar: 314-214-4069</a>
+              <a class="btn-outline" href="#contacto">Solicitar asesoría</a>
             </div>
-          </form>
+
+            <div style="margin-top:12px" class="note">¿No tienes claro qué documentos necesitas para la declaración? Trae tus certificados de ingresos y retenciones, extractos bancarios y soportes de gastos deducibles; si quieres, los reviso antes de la cita.</div>
+          </div>
         </div>
-      </section>
-    </main>
+
+        <div class="card" style="margin-top:14px">
+          <h3>¿Por qué elegirnos?</h3>
+          <div class="feature"><div class="num">1</div><div><strong>Especialización</strong><div class="muted">En declaraciones de renta de personas naturales y asesoría contable.</div></div></div>
+          <div class="feature"><div class="num">2</div><div><strong>Claridad</strong><div class="muted">Explicaciones simples y reportes listos para DIAN o auditorías.</div></div></div>
+          <div class="feature"><div class="num">3</div><div><strong>Soporte práctico</strong><div class="muted">Recomendaciones financieras y planes para reducir riesgos tributarios.</div></div></div>
+        </div>
+      </div>
+
+      <aside class="card contact-card" id="contacto">
+        <h3>Contacto</h3>
+        <p class="muted">Contáctame para agendar una asesoría o revisar tu declaración.</p>
+        <p><strong>Teléfono:</strong><br><a href="tel:+573142144069">+57 314 214 4069</a></p>
+        <p><strong>Correo:</strong><br><a href="mailto:dd.contable46@gmail.com">dd.contable46@gmail.com</a></p>
+        <p><strong>Servicios:</strong><br><span class="muted">Declaración de renta, asesoría contable, outsourcing contable</span></p>
+        <div style="margin-top:12px">
+          <a class="btn" href="tel:+573142144069">Llamar ahora</a>
+          <a class="btn-outline" href="#form">Enviar mensaje</a>
+        </div>
+        <div class="faq" style="margin-top:12px">
+          <strong>Horario:</strong>
+          <div class="muted">Lun - Vie: 8:30 - 17:30</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="servicios" style="margin-top:22px">
+      <div class="card">
+        <h3>Servicios detallados</h3>
+        <div class="grid-3" style="margin-top:12px">
+          <div>
+            <h4>Declaración de renta - Persona natural</h4>
+            <p class="muted">Cálculo, revisión de soportes, optimización de deducciones y entrega del archivo para DIAN.</p>
+          </div>
+          <div>
+            <h4>Outsourcing contable</h4>
+            <p class="muted">Registro contable mensual, conciliaciones bancarias y preparación de estados financieros.</p>
+          </div>
+          <div>
+            <h4>Asesoría tributaria y planeación</h4>
+            <p class="muted">Estrategias legales para optimizar tu carga tributaria y cumplimiento frente a la DIAN.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="margin-top:18px">
+      <div class="card">
+        <h3>Preguntas frecuentes</h3>
+        <div style="margin-top:8px">
+          <strong>¿Qué documentos debo traer?</strong>
+          <div class="muted">Certificados de ingresos y retenciones, extractos bancarios y facturas de gastos deducibles.</div>
+        </div>
+        <div style="margin-top:8px">
+          <strong>¿Cobran por revisión previa?</strong>
+          <div class="muted">Ofrecemos revisión inicial gratuita; para revisiones extensas aplican tarifas acordadas previamente.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="form" style="margin-top:18px">
+      <div class="card">
+        <h3>Escríbeme</h3>
+        <p class="muted">Usa el formulario o comunícate por teléfono. (Este formulario no envía correos automáticamente.)</p>
+        <form onsubmit="event.preventDefault();alert('Formulario listo para copiar:\nNombre: '+document.getElementById('name').value+'\nTel: '+document.getElementById('phone').value+'\nMensaje: '+document.getElementById('message').value)">
+          <label for="name">Nombre</label>
+          <input id="name" placeholder="Tu nombre">
+          <label for="phone">Teléfono</label>
+          <input id="phone" placeholder="Ej: 3142144069">
+          <label for="message">Mensaje</label>
+          <textarea id="message" placeholder="Cuéntame en qué te puedo ayudar"></textarea>
+          <div style="margin-top:12px">
+            <button class="btn" type="submit">Preparar mensaje</button>
+            <a class="btn-outline" href="tel:+573142144069">Llamar</a>
+          </div>
+        </form>
+      </div>
+    </section>
 
     <footer>
-      <p class="muted">© <strong>Daniel Duarte</strong> — Servicios contables · Tel: 314-214-4069</p>
+      <div class="muted">© <strong>Daniel Duarte</strong> — Servicios contables · Tel: 314-214-4069</div>
     </footer>
   </div>
 
   <script>
-    console.log("Página cargada correctamente");
+    console.log("Página de Daniel Duarte cargada correctamente.");
   </script>
 </body>
 </html>
+
