@@ -5,14 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Daniel Duarte - Servicios Contables</title>
   <meta name="description" content="Asesoría contable y financiera. Especialistas en declaración de renta de persona natural, outsourcing contable y asesoría tributaria.">
-  <meta property="og:title" content="Daniel Duarte - Servicios Contables">
-  <meta property="og:locale" content="es_CO">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Daniel Duarte">
-  <meta property="og:url" content="https://danielduarte1946.github.io/DANIEL-DUARTE/">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Daniel Duarte - Servicios Contables">
-  <link rel="canonical" href="https://danielduarte1946.github.io/DANIEL-DUARTE/">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
 
   <style>
@@ -29,6 +21,7 @@
       font-family: 'Inter', system-ui, sans-serif;
       color: #e6eef6;
       background: linear-gradient(180deg, #071022 0%, #0b1730 100%);
+      overflow-x: hidden;
     }
     .container { max-width: 1100px; margin: 36px auto; padding: 20px; }
     header { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -42,28 +35,45 @@
     h1 { margin: 0; font-size: 20px; }
     p.lead { margin: 0; color: var(--muted); }
     nav a { color: var(--muted); text-decoration: none; margin-left: 16px; }
+    nav a:hover { color: var(--accent); }
     .hero { display: grid; grid-template-columns: 1fr 360px; gap: 28px; margin-top: 28px; align-items: start; }
     .card {
       background: var(--card);
       padding: 22px; border-radius: 12px;
       box-shadow: 0 6px 18px rgba(3, 7, 18, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.02);
+      transition: transform 0.3s ease;
     }
-    .services ul { padding-left: 18px; margin: 10px 0; }
+    .card:hover { transform: scale(1.01); }
     .cta { display: flex; gap: 12px; margin-top: 14px; }
     .btn {
       background: var(--accent); color: #062023;
       padding: 10px 14px; border-radius: 10px;
       font-weight: 600; text-decoration: none;
-      display: inline-block;
+      display: inline-block; transition: all 0.3s ease;
     }
+    .btn:hover { background: #2dd4bf; transform: scale(1.05); }
     .btn-outline {
       border: 1px solid rgba(255, 255, 255, 0.06);
       padding: 10px 14px; border-radius: 10px;
       color: var(--muted); text-decoration: none;
     }
+    input, textarea {
+      width: 100%; margin-top: 6px; margin-bottom: 10px;
+      padding: 10px; border-radius: 8px; border: 1px solid #1e293b;
+      background: #0f172a; color: #e6eef6;
+    }
+    input:focus, textarea:focus { border-color: var(--accent); outline: none; }
+    .error { border-color: red !important; }
+    .mensaje-exito {
+      background: #0ea5a3; color: #062023;
+      padding: 10px; border-radius: 8px; text-align: center;
+      font-weight: 600; margin-top: 10px; display: none;
+    }
+    #estado {
+      color: var(--accent); font-weight: bold; margin-top: 10px;
+    }
     footer { margin-top: 28px; padding: 24px; text-align: center; color: var(--muted); font-size: 14px; }
-    .muted { color: var(--muted); }
   </style>
 </head>
 
@@ -77,7 +87,7 @@
           <p class="lead">Servicios contables — asesoría financiera y contable. Especialistas en declaración de renta persona natural.</p>
         </div>
       </div>
-      <nav aria-label="principal">
+      <nav>
         <a href="#servicios">Servicios</a>
         <a href="#faq">Preguntas</a>
         <a href="#contacto">Contacto</a>
@@ -87,12 +97,13 @@
     <section class="hero">
       <div>
         <div class="card">
-          <h2>Te ayudo con tu declaración de renta</h2>
+          <h2 id="saludo"></h2>
           <p class="muted">Asesoría personalizada para personas naturales: planeación, optimización y presentación de tu declaración de renta.</p>
           <div class="cta">
             <a class="btn" href="tel:+573142144069">Llamar: 314-214-4069</a>
             <a class="btn-outline" href="#contacto">Solicitar asesoría</a>
           </div>
+          <div id="estado"></div>
         </div>
       </div>
 
@@ -118,6 +129,7 @@
             <button class="btn" type="submit">Preparar mensaje</button>
             <a class="btn-outline" href="tel:+573142144069">Llamar</a>
           </div>
+          <div class="mensaje-exito" id="mensajeExito">✅ Tu mensaje ha sido preparado correctamente.</div>
         </form>
       </div>
     </section>
@@ -128,62 +140,63 @@
   </div>
 
   <script>
-    alert("Bienvenido a la página de Daniel Duarte — Servicios Contables");
-
-    // Contador con incremento
-    let visitas = 0;
-    for (let i = 0; i < 1; i++) {
-      visitas++;
+    // Animación de bienvenida
+    const saludo = document.getElementById("saludo");
+    const mensajes = ["Te ayudo con tu declaración de renta", "Optimiza tus impuestos", "Planea tu declaración con confianza"];
+    let i = 0;
+    function mostrarSaludo() {
+      saludo.textContent = mensajes[i];
+      i = (i + 1) % mensajes.length;
     }
-    console.log("Visitas registradas: " + visitas);
+    mostrarSaludo();
+    setInterval(mostrarSaludo, 3000);
 
-    // Operadores de igualdad y relacionales
+    // Mostrar estado laboral
     let hora = new Date().getHours();
+    const estado = document.getElementById("estado");
     if (hora >= 8 && hora <= 17) {
-      console.log("Estamos en horario laboral");
+      estado.textContent = "🕓 Disponible — horario laboral";
     } else {
-      console.log("Fuera del horario laboral");
+      estado.textContent = "🌙 Fuera del horario laboral — deja tu mensaje y te responderé pronto.";
     }
 
-    // Función con validación
-    function validarFormulario() {
-      let nombre = document.getElementById("name").value;
-      let telefono = document.getElementById("phone").value;
-      let mensaje = document.getElementById("message").value;
-
-      if (nombre == "" || telefono == "" || mensaje == "") {
-        alert("Por favor, completa todos los campos antes de continuar.");
-        return false;
-      }
-
-      let confirmar = confirm("¿Deseas revisar tu mensaje antes de enviarlo?");
-      if (confirmar) {
-        alert(
-          "Formulario listo para copiar:\n\n" +
-          "Nombre: " + nombre +
-          "\nTeléfono: " + telefono +
-          "\nMensaje: " + mensaje
-        );
-      } else {
-        alert("Puedes seguir editando tu mensaje.");
-      }
-      return true;
-    }
-
-    // Evento de envío
+    // Validación mejorada del formulario
     document.getElementById("contactForm").addEventListener("submit", function(e) {
       e.preventDefault();
-      validarFormulario();
+      let nombre = document.getElementById("name");
+      let telefono = document.getElementById("phone");
+      let mensaje = document.getElementById("message");
+      let campos = [nombre, telefono, mensaje];
+      let valido = true;
+
+      campos.forEach(campo => {
+        campo.classList.remove("error");
+        if (campo.value.trim() === "") {
+          campo.classList.add("error");
+          valido = false;
+        }
+      });
+
+      if (!valido) {
+        alert("⚠️ Por favor completa todos los campos.");
+        return;
+      }
+
+      document.getElementById("mensajeExito").style.display = "block";
+      console.log(`Nombre: ${nombre.value}, Teléfono: ${telefono.value}, Mensaje: ${mensaje.value}`);
     });
 
-    // While + break (mostrar sugerencias aleatorias)
-    let contador = 0;
-    while (contador < 1) {
-      let sugerencias = ["Recuerda guardar tus certificados", "Revisa tus deducciones", "Planea tu declaración con tiempo"];
-      let aleatoria = sugerencias[Math.floor(Math.random() * sugerencias.length)];
-      console.log("Consejo: " + aleatoria);
-      break;
-    }
+    // Consejos aleatorios cada 5 segundos
+    const consejos = [
+      "💡 Revisa tus deducciones anualmente.",
+      "🗓️ Planea tu declaración con tiempo.",
+      "📁 Guarda tus certificados de ingresos.",
+      "✅ Evita sanciones cumpliendo los plazos."
+    ];
+    setInterval(() => {
+      const consejo = consejos[Math.floor(Math.random() * consejos.length)];
+      console.log("Consejo: " + consejo);
+    }, 5000);
   </script>
 </body>
 </html>
